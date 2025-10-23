@@ -1,8 +1,7 @@
 import { motion } from 'motion/react';
 import { Target, TrendingUp, Users, Award, CheckCircle2, Shield } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import profilePhoto from 'figma:asset/88125d2fcc83405130c4c9da416c7d676c3d454c.png';
-import certificate from 'figma:asset/4b44f5944476c7e9d414812864a27414fbcf002f.png';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 export default function AboutPage() {
   return (
@@ -62,8 +61,8 @@ export default function AboutPage() {
                   
                   {/* Image */}
                   <div className="relative w-full rounded-full overflow-hidden border-4 border-white shadow-xl aspect-[3/4]">
-                    <img 
-                      src={profilePhoto}
+                    <ImageWithFallback 
+                      src="/images/mdk-profile.jpg"
                       alt="מרדכי דניאל קליין"
                       className="w-full h-full object-cover object-center"
                     />
@@ -207,12 +206,10 @@ export default function AboutPage() {
 
                   {/* Certificate Image */}
                   <div className="p-4 md:p-8">
-                    <motion.img
-                      src={certificate}
+                    <ImageWithFallback
+                      src="/images/lishkat-yoazim-certificate.jpg"
                       alt="תעודת חברות בלשכת היועצים העסקיים והניהוליים בישראל"
                       className="w-full h-auto rounded-lg shadow-lg"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.3 }}
                     />
                   </div>
 

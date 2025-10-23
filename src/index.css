@@ -87,6 +87,7 @@
     --color-slate-300: oklch(.869 .022 252.894);
     --color-slate-600: oklch(.446 .043 257.281);
     --color-slate-700: oklch(.372 .044 257.287);
+    --color-gray-100: oklch(.967 .003 264.542);
     --color-white: #fff;
     --spacing: .25rem;
     --container-2xl: 42rem;
@@ -977,10 +978,6 @@
     width: calc(var(--spacing) * 96);
   }
 
-  .w-auto {
-    width: auto;
-  }
-
   .w-full {
     width: 100%;
   }
@@ -1423,6 +1420,10 @@
     }
   }
 
+  .bg-gray-100 {
+    background-color: var(--color-gray-100);
+  }
+
   .bg-input-background {
     background-color: var(--input-background);
   }
@@ -1536,6 +1537,11 @@
 
   .from-emerald-50 {
     --tw-gradient-from: var(--color-emerald-50);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+
+  .from-emerald-700 {
+    --tw-gradient-from: var(--color-emerald-700);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 

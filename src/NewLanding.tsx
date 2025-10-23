@@ -7,9 +7,6 @@ import { CheckCircle2, CheckCircle, ArrowLeft, TrendingUp, Target, Users, Briefc
 import { motion } from 'motion/react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'sonner@2.0.3';
-import sprintLogo from 'figma:asset/f54119a0a6b681dad2c885bd59b2f54d53912281.png';
-import sprintTextGold from 'figma:asset/7c6dbce4ffd04d54e185014e2151233310a3023d.png';
-import profilePhoto from 'figma:asset/88125d2fcc83405130c4c9da416c7d676c3d454c.png';
 
 export default function App() {
   const [formData, setFormData] = useState({
@@ -1064,7 +1061,7 @@ export default function App() {
                         {/* Image - Vertical Oval */}
                         <div className="relative w-full rounded-full overflow-hidden border-4 border-white shadow-xl aspect-[3/4]">
                           <img 
-                            src={profilePhoto}
+                            src="https://images.unsplash.com/photo-1738750908048-14200459c3c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
                             alt="מרדכי דניאל קליין"
                             className="w-full h-full object-cover object-center"
                           />
@@ -1142,8 +1139,8 @@ export default function App() {
       <section className="py-16 md:py-24 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 text-white relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-5">
-          <img src={sprintLogo} alt="" className="absolute top-10 right-10 w-32 h-32" />
-          <img src={sprintLogo} alt="" className="absolute bottom-10 left-10 w-40 h-40" />
+          <Rocket className="absolute top-10 right-10 w-32 h-32" />
+          <Target className="absolute bottom-10 left-10 w-40 h-40" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

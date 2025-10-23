@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Rocket } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import logo from 'figma:asset/aa236394a85839d09501bca626eae31c5d179ec4.png';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,11 +23,15 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-              <img 
-                src={logo} 
-                alt="MDK Logo" 
-                className="h-12 w-auto"
-              />
+              <div className="flex items-center gap-2">
+                <div className="w-12 h-12 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-full flex items-center justify-center shadow-lg">
+                  <Rocket className="w-7 h-7 text-[#b89c57]" />
+                </div>
+                <div className="flex flex-col leading-tight">
+                  <span className="text-emerald-900 font-bold text-xl">MDK</span>
+                  <span className="text-[#b89c57] text-xs">SPRINT</span>
+                </div>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
